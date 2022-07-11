@@ -253,6 +253,8 @@ pub struct ViewerOptions {
     #[serde(default)]
     pub is_r2_b0xx: bool,
     #[serde(default)]
+    pub is_lbx: bool,
+    #[serde(default)]
     pub colored_rims: bool,
     pub custom_tty: Option<String>,
     #[serde(skip)]
@@ -269,6 +271,7 @@ impl Default for ViewerOptions {
             button_active_colors: ViewerButtonColors::new_with_color(*DEFAULT_ACTIVE_COLOR),
             custom_tty: None,
             is_r2_b0xx: false,
+            is_lbx: false,
             colored_rims: false,
             path: Default::default(),
         }

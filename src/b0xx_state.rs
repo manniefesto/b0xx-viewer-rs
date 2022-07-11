@@ -57,6 +57,7 @@ pub struct B0xxState {
     pub c_down: bool,
     pub mod_ls: bool,
     pub mod_ms: bool,
+    pub select: bool,
 }
 
 #[cfg(feature = "fake_serial")]
@@ -83,6 +84,7 @@ impl B0xxState {
             c_down: rand::random::<bool>(),
             mod_ls: rand::random::<bool>(),
             mod_ms: rand::random::<bool>(),
+            select: rand::random::<bool>(),
         }
     }
 }
@@ -116,6 +118,7 @@ impl TryFrom<&[B0xxReport]> for B0xxState {
             c_down: value[17].into(),
             mod_ls: value[18].into(),
             mod_ms: value[19].into(),
+            select: value[20].into()
         })
     }
 }
@@ -143,6 +146,7 @@ impl From<[B0xxReport; 20]> for B0xxState {
             c_down: value[17].into(),
             mod_ls: value[18].into(),
             mod_ms: value[19].into(),
+            select: false
         }
     }
 }
@@ -170,6 +174,7 @@ impl From<[B0xxReport; 25]> for B0xxState {
             c_down: value[17].into(),
             mod_ls: value[18].into(),
             mod_ms: value[19].into(),
+            select: value[20].into(),
         }
     }
 }

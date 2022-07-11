@@ -107,7 +107,7 @@ pub fn start_serial_probe(
         .name("b0xx_viewer_serial".into())
         .spawn(move || {
             let mut buf = Vec::with_capacity(25);
-            let mut state = [B0xxReport::default(); 20];
+            let mut state = [B0xxReport::default(); 25];
 
             let port_builder = serialport::new(&b0xx_port.port_name, 115_200)
                 .data_bits(serialport::DataBits::Eight)

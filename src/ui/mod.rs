@@ -44,6 +44,7 @@ widget_ids! {
         c_right_btn,
         c_up_btn,
         c_down_btn,
+        select_btn,
         start_label,
         y_label,
         x_label,
@@ -64,6 +65,7 @@ widget_ids! {
         c_right_label,
         c_up_label,
         c_down_label,
+        select_label,
         fps_counter,
     }
 }

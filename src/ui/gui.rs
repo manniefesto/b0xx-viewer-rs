@@ -412,7 +412,7 @@ pub fn render_gui(
     btn.x_y_relative_to(ids.c_left_btn, 0., 48.)
         .set(ids.c_down_btn, ui);
 
-    if let Some(text_color) = m_text.take() {Have 
+    if let Some(text_color) = m_text.take() {
         conrod_core::widget::Text::new("CD")
             .color(text_color)
             .mid_top_with_margin_on(ids.c_down_btn, btn_label_margin)

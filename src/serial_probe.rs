@@ -160,11 +160,7 @@ pub fn start_serial_probe(
 
                 port.consume(bytes_read);
                 if bytes_read == 25 {
-                    let end_index = buf.iter().position(|item| *item == B0xxReport::End as u8).unwrap() - 4;
-                    let start_index = end_index - 20;
-                    trace!("Selected range: {}..{}", start_index, end_index);
-
-                    for i in start_index..end_index {
+                    for i in 0..25 {
                         state[i] = buf[i].into();
                     }
                 } else {

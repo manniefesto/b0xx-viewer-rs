@@ -213,7 +213,7 @@ pub fn render_gui(
         options.colored_rims,
     );
 
-    btn.x_y_relative_to(ids.start_btn, 100., 5.)
+    btn.x_y_relative_to(ids.start_btn, 100., 35.)
         .set(ids.b_btn, ui);
 
     if let Some(text_color) = m_text.take() {
@@ -233,7 +233,7 @@ pub fn render_gui(
         options.colored_rims,
     );
 
-    btn.x_y_relative_to(ids.b_btn, 42., 15.).set(ids.x_btn, ui);
+    btn.x_y_relative_to(ids.b_btn, 42., -25.).set(ids.x_btn, ui);
 
     if let Some(text_color) = m_text.take() {
         conrod_core::widget::Text::new("X")
@@ -310,7 +310,7 @@ pub fn render_gui(
         options.colored_rims,
     );
 
-    btn.x_y_relative_to(ids.b_btn, 0., 42.).set(ids.r_btn, ui);
+    btn.x_y_relative_to(ids.b_btn, 0., -42.).set(ids.r_btn, ui);
 
     if let Some(text_color) = m_text.take() {
         conrod_core::widget::Text::new("R")
@@ -329,7 +329,7 @@ pub fn render_gui(
         options.colored_rims,
     );
 
-    btn.x_y_relative_to(ids.b_btn, -10., -100.)
+    btn.x_y_relative_to(ids.b_btn, -10., -140.)
         .set(ids.a_btn, ui);
 
     if let Some(text_color) = m_text.take() {
@@ -369,7 +369,7 @@ pub fn render_gui(
         options.colored_rims,
     );
 
-    btn.x_y_relative_to(ids.c_up_btn, -34., -24.)
+    btn.x_y_relative_to(ids.a_btn, -36., -24.)
         .set(ids.c_left_btn, ui);
 
     if let Some(text_color) = m_text.take() {
@@ -409,10 +409,10 @@ pub fn render_gui(
         options.colored_rims,
     );
 
-    btn.x_y_relative_to(ids.c_left_btn, 0., -48.)
+    btn.x_y_relative_to(ids.c_left_btn, 0., 48.)
         .set(ids.c_down_btn, ui);
 
-    if let Some(text_color) = m_text.take() {
+    if let Some(text_color) = m_text.take() {Have 
         conrod_core::widget::Text::new("CD")
             .color(text_color)
             .mid_top_with_margin_on(ids.c_down_btn, btn_label_margin)
